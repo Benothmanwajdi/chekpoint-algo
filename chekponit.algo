@@ -1,0 +1,26 @@
+ALGORITHM read a sentence
+VAR
+  sm,sv,l,i:INTEGER
+  ch:STRING  
+BEGIN
+    write ("give a sentence")
+    read (ch)
+   sv:=0
+   sm:=1
+   l:=0
+   FOR i := 1 to lenght(ch) do
+     IF (ch[i]<>" ") THEN
+         l:=l+1
+     ELSE_IF (upcase(ch[i]in['A''E''U''O''Y'])) THEN
+         sv:=sv+1
+     ELSE IF (ch[i]=" ") THEN
+         sm:=sm+1
+     END_IF
+         
+     END_IF
+     write('number of words:',sm)
+     write ('number of vowels:',sv)
+     write ('lenght:',l)
+     
+   
+END
